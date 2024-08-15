@@ -1,0 +1,299 @@
+/*
+==============================
+  CONTENT
+==============================
+  1- Imports
+    1.1- Fonts
+  2- Custom Properties
+    2.1- Colors
+    2.2- Font Families
+    2.3- Font Sizes
+  3- Reset Styles
+    3.1- General
+    3.2- Body
+    3.3- Typography
+    3.4- Unordered Lists
+    3.5- Images
+    3.6- Buttons
+  4- Utility Classes
+    4.1- Screen Readers Only
+    4.2- Container
+  5- Main Styles
+    5.1- Header
+      5.1.1- Logo
+      5.1.2- Main Navigation Menu
+    5.2- Main
+      5.2.1- Hero
+      5.2.2- About Us
+      5.2.3- Our Team
+      5.2.4- Our Menu
+      5.2.5- Testimonials
+      5.2.6- Contact Us
+      5.2.7- Reservation Hero
+    5.3- Footer
+*/
+
+/* ==============================
+  1- Imports
+============================== */
+
+/* 1.1- Fonts
+============================== */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* ==============================
+  2- Custom Properties
+============================== */
+:root {
+  /* 2.1- Colors */
+  --white-color: #ffffff;
+  --primary-color: #bc6c25;
+  --secondary-color: #dda15e;
+  --section-bg-color: #b78752;
+  --custom-btn-bg-color: #bc6c25;
+  --custom-btn-bg-hover-color: #dda15e;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #7fffd4;
+  --link-hover-color: #e76f51;
+
+  /* 2.2- Font Families */
+  --body-font-family: "Plus Jakarta Sans", sans-serif;
+
+  /* 2.3- Font Sizes */
+  --h1-font-size: 68px;
+  --h2-font-size: 46px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 20px;
+  --btn-font-size: 16px;
+  --form-btn-font-size: 18px;
+  --menu-font-size: 16px;
+
+  /* 2.4- Border Radiuses */
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
+
+  /* 2.5- Font Weights */
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+/* ==============================
+  3- Reset Styles
+============================== */
+
+/* 3.1- General
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 3.2- Body
+============================== */
+
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-margin-top: 154px;
+}
+
+body {
+  background-color: var(--white-color);
+  font-family: var(--body-font-family);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 100%;
+}
+
+/* 3.3- Typography
+============================== */
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+}
+
+li {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+}
+
+a,
+button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+
+a {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+/* 3.4- Unordered Lists
+============================== */
+ul {
+  list-style: none;
+}
+
+/* 3.5- Images
+============================== */
+img {
+  width: 100%;
+  display: block;
+}
+
+/* 3.6- Buttons
+============================== */
+
+button {
+  color: inherit;
+  background-color: transparent;
+  border: 2px solid transparent;
+  font-size: inherit;
+  display: block;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+/* ==============================
+  4- Utility Classes
+============================== */
+
+/* 4.1- Screen Readers Only
+============================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 4.2- Container
+============================== */
+.container {
+  max-width: 540px;
+  margin-inline: auto;
+  background-color: red;
+  padding-inline: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* ==============================
+  5- Main Styles
+============================== */
+
+/* 5.1- Header
+============================== */
+
+/* ========== 5.1.1- Logo ========== */
+
+/* ========== 5.1.2- Main Navigation Menu ========== */
+
+/* 5.2- Main
+============================== */
+
+/* ========== 5.2.1- Hero ========== */
+
+/* ========== 5.2.2- About Us ========== */
+
+/* ========== 5.2.3- Our Team ========== */
+
+/* ========== 5.2.4- Our Menu ========== */
+
+/* ========== 5.2.5- Testimonials ========== */
+
+/* ========== 5.2.6- Contact Us ========== */
+
+/* ========== 5.2.7- Reservation Hero ========== */
+
+/* 5.3- Footer
+============================== */
